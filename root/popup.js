@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Get the output div and the SUMMARY heading
     var outputDiv = document.getElementById('outputDiv');
     var summaryHeading = document.getElementById('summaryHeading');
-    var heading = document.getElementById('heading');
+    
 
     // Establish a connection to the background script
     const backgroundPort = chrome.runtime.connect({ name: 'popup' });
@@ -22,7 +22,6 @@ document.addEventListener('DOMContentLoaded', function () {
     backgroundPort.onMessage.addListener(function (msg) {
         if (msg.action === 'updateOutput') {
             // Update the heading and the output div with the summarized text
-            heading.style.display = 'block';
             summaryHeading.style.display = 'block';
             outputDiv.style.display = 'block';
             outputDiv.innerText = msg.summary;
