@@ -1,25 +1,37 @@
-# TEXT SUMMARIZER
+# Text Summarizer Chrome Extension
 
-## Description
-
-Text Summarizer is a project that leverages Natural Language Processing (NLP) techniques to automatically generate concise and coherent summaries from large pieces of text. The goal is to assist users in quickly understanding the main ideas and key information within a document without having to read the entire content.
+This Chrome extension utilizes Natural Language Processing (NLP) to summarize text. It communicates with a Python server to perform text summarization using NLTK (Natural Language Toolkit) logic.
 
 ## Features
 
-- Utilizes advanced NLP algorithms for extracting important information.
-- Generates abstractive or extractive summaries based on user preferences.
-- Supports multiple input formats such as plain text, documents, or web pages.
-- Easy integration with existing applications or workflows.
-
-## How it Works
-
-The Text Summarizer employs state-of-the-art NLP models to analyze and comprehend the input text. It identifies significant sentences, phrases, or concepts and constructs a condensed summary while preserving the essential meaning of the original content. Users have the flexibility to choose between different summarization approaches based on their specific needs.
+- Summarize text with a click of a button.
+- NLP-based summarization using NLTK.
+- Communicates with a Python server for text processing.
 
 ## Getting Started
 
-1. Clone the repository:
+1. **Setup Python Server:**
+   - Clone the repository: `git clone https://github.com/GLITCH-08/TEXT-SUMMARY.git`
+   - cd root
+   - Run the server: `python app.py`
 
-    ```bash
-    git clone https://github.com/your-username/text-summarizer.git
-    cd text-summarizer
-    ```
+2. **Install the Chrome Extension:**
+   - Open Chrome and go to `chrome://extensions/`.
+   - Enable "Developer mode" in the top right.
+   - Click "Load unpacked" and select the `chrome-extension` directory from this repository.
+
+3. **Usage:**
+   - Visit a webpage or open a new tab.
+   - Enter the text you want to summarize in the input field.
+   - Click the "Summarize" button.
+
+4. **View Summarized Text:**
+   - The summarized text will be displayed in the output section with a heading.
+
+## Contributing
+
+Feel free to contribute to the development of this Chrome extension. If you find any issues or have suggestions, please open an issue or create a pull request.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
