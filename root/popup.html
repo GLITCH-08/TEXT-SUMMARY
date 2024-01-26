@@ -1,7 +1,9 @@
 <!-- popup.html -->
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Text Summarizer</title>
     <style>
         body {
@@ -24,11 +26,18 @@
             border: none;
             cursor: pointer;
         }
+
+        #outputDiv {
+            margin-top: 10px;
+            border: 1px solid #ddd;
+            padding: 10px;
+        }
     </style>
 </head>
 <body>
     <textarea id="inputText" placeholder="Enter text to summarize..."></textarea>
     <button id="summarizeButton">Summarize</button>
+    <div id="outputDiv"></div>
 
     <script src="popup.js"></script>
 </body>
