@@ -1,0 +1,21 @@
+{
+  "manifest_version": 2,
+  "name": "Security Questions",
+  "version": "1.0",
+  "description": "Ask security questions before accessing other tabs",
+  "permissions": ["storage", "activeTab", "tabs", "webNavigation"],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "browser_action": {
+    "default_icon": "ques.png",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.youtube.com/"],
+      "js": ["content.js"]
+    }
+  ]
+}
